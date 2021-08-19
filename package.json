@@ -1,0 +1,27 @@
+{
+  "name": "blockexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "mitzie",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "ejs": "^2.7.4",
+    "etherscan-api": "^10.0.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.3",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "web3": "^1.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

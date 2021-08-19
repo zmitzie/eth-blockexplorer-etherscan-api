@@ -1,0 +1,26 @@
+<%- include('includes/head.ejs') %>
+  <div class="container">
+    <% if (typeof success !=='undefined' && success !==null) { %>
+      <div class="alert alert-success" role="alert">
+        <p>
+          <%= success %>
+        </p>
+      </div>
+      <% }%>
+        <% if (typeof error !=='undefined' && error !==null) { %>
+          <div class="alert alert-danger" role="alert">
+            <p>
+              <%= error %>
+            </p>
+          </div>
+          <% }%>
+            <br>
+            <h3>Block Explorer App</h3>
+            <p>A quick nodeJS app that uses the Etherscan API to fetch the latest transactions of an Ethereum address
+            </p>
+            <p>You can also specify the starting block number, or set to 0 to fetch all the transactions of the address.
+              The results include internal transactions, ERC-20 or ERC-721 transfers, and the app differentiates transactions between Ether transfers and smart
+              contract interactions. Amounts are converted from Wei to Ether, and dates from Unix timestamps to a human
+              readable format. Searching for ERC-20 transfers, you will also get the name of the token as well as the amount.</p>
+  </div>
+  <%- include('includes/end.ejs') %>

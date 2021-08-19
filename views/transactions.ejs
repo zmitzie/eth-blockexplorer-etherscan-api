@@ -1,0 +1,37 @@
+<%- include('includes/head.ejs') %>
+<div class="container-fluid">
+  <h3 style="text-align:center">List of Transactions for <%= address %></h3>
+  <br>
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Interaction</th>
+        <th scope="col">From</th>
+        <th></th>
+        <th scope="col">To</th>
+        <th scope="col">Date</th>
+        <th scope="col">Value (Ether)</th>
+        <th></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <% transactions.forEach(function (value, i) { %>
+      <tr>
+        <th scope="row"><%= i + 1 %></th>
+        <td><button type="button" class="btn btn-primary btn-sm"><%= value.interaction%></button></td>
+        <td><%= value.from%></td>
+        <td><a class="badge badge-primary"><%= value.direction%></a></td>
+        <td><%= value.to%></td>
+        <td><%= value.date%></td>
+        <td><%= value.ether%></td>
+        <td><a href="https://etherscan.io/tx/<%= value.hash%>" target="_blank">More..</a>
+        </td>
+
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<%- include('includes/end.ejs') %>
